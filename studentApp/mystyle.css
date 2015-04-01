@@ -1,0 +1,36 @@
+/*
+    Document   : studentSumHarp/mystyle.css
+    Created on : 2015-04-01 01:56 AM
+    Author     : johncomposed
+    Description:
+    Purpose of the stylesheet follows.
+    To change this template use Tools | Templates.
+*/
+
+@media print {
+  .noprint {
+    display:none;
+  }
+  .page {
+    width:7.5in;
+    padding:0 0.5in;
+  }
+  .print-sides {
+    padding:0.5in 0;
+  }
+  
+}
+
+
+.unbold {
+  font-weight:normal;
+}
+
+.bold {
+  font-weight:bolder;
+}
+
+
+.click {
+  cursor:pointer;
+}
