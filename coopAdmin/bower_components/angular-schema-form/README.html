@@ -1,0 +1,138 @@
+<h1>Angular Schema Form <a href="http://www.twitter.com/ngSchemaForm"><img src="http://i.imgur.com/tXSoThF.png" alt="alt text" title="twitter icon with padding"></a></h1>
+<p><a href="https://travis-ci.org/Textalk/angular-schema-form"><img src="https://travis-ci.org/Textalk/angular-schema-form.svg?branch=master" alt="Build Status"></a>
+<a href="https://coveralls.io/r/Textalk/angular-schema-form?branch=development"><img src="https://coveralls.io/repos/Textalk/angular-schema-form/badge.png?branch=master" alt="Coverage Status"></a>
+<a href="http://badge.fury.io/bo/angular-schema-form"><img src="https://badge.fury.io/bo/angular-schema-form.svg" alt="Bower version"></a>
+<a href="http://badge.fury.io/js/angular-schema-form"><img src="https://badge.fury.io/js/angular-schema-form.svg" alt="npm version"></a></p>
+<p>Generate forms from JSON schemas using AngularJS!</p>
+<h2>Web Page</h2>
+<p><a href="http://schemaform.io">schemaform.io</a></p>
+<h2>Demo Time!</h2>
+<p><a href="http://textalk.github.io/angular-schema-form/examples/bootstrap-example.html">Try out the example page</a>.
+Try editing the schema or form definition and see what comes out!</p>
+<h2>What is it?</h2>
+<p>Schema Form is a set of AngularJS directives (and a couple of services). It can do two things to
+make life easier:</p>
+<ol>
+<li>Create a form directly from a JSON schema.</li>
+<li>Validate form fields against that same JSON schema.</li>
+</ol>
+<p>Schema Form uses convention over configuration, so it comes packaged with some sensible defaults.
+But you can always customize it by changing the order and types of form fields.</p>
+<h4>JSON Form</h4>
+<p>Schema Form is inspired by the nice <a href="https://github.com/joshfire/jsonform">JSON Form</a> library and
+aims to be roughly compatible with it, especially its form definition. So what sets Schema Form
+apart from JSON Form?</p>
+<ol>
+<li>Schema Form integrates deeply with AngularJS and uses AngularJS conventions to handle forms.</li>
+<li>Schema Form uses <a href="https://github.com/geraintluff/tv4">tv4</a> for validation, making it compatible
+with version 4 of the JSON schema standard.</li>
+<li>By default, Schema Form generates Bootstrap 3-friendly HTML.</li>
+</ol>
+<h2>Documentation</h2>
+<p>You can find <a href="docs/index.md">all documentation here</a>, it covers all the different field types
+and their options.</p>
+<p>It also covers how to <a href="https://github.com/Textalk/angular-schema-form/blob/master/docs/extending.md">extend angular schema form with your own field types</a>.</p>
+<h2>Basic Usage</h2>
+<p>First, expose your schema, form, and model to the $scope.</p>
+<pre><code class="language-javascript">angular.module(&#39;myModule&#39;, [&#39;schemaForm&#39;])
+       .controller(&#39;FormController&#39;, function($scope) {
+  $scope.schema = {
+    type: &quot;object&quot;,
+    properties: {
+      name: { type: &quot;string&quot;, minLength: 2, title: &quot;Name&quot;, description: &quot;Name or alias&quot; },
+      title: {
+        type: &quot;string&quot;,
+        enum: [&#39;dr&#39;,&#39;jr&#39;,&#39;sir&#39;,&#39;mrs&#39;,&#39;mr&#39;,&#39;NaN&#39;,&#39;dj&#39;]
+      }
+    }
+  };
+
+  $scope.form = [
+    &quot;*&quot;,
+    {
+      type: &quot;submit&quot;,
+      title: &quot;Save&quot;
+    }
+  ];
+
+  $scope.model = {};
+});</code></pre>
+<p>Then load them into Schema Form using the <code>sfSchema</code>, <code>sfForm</code>, and <code>sfModel</code> directives.</p>
+<pre><code class="language-html">&lt;div ng-controller=&quot;FormController&quot;&gt;
+    &lt;form sf-schema=&quot;schema&quot; sf-form=&quot;form&quot; sf-model=&quot;model&quot;&gt;&lt;/form&gt;
+&lt;/div&gt;</code></pre>
+<h2>Installation</h2>
+<h3>Bower</h3>
+<p>It&#39;s simplest to install Schema Form using <a href="http://bower.io/">Bower</a>.</p>
+<pre><code class="language-bash">bower install angular-schema-form</code></pre>
+<p>This will install the latest release and basic dependencies. See
+<a href="#dependencies">dependecies section below</a>.</p>
+<h3>Manual</h3>
+<p>You can also just download the contents of the <code>dist/</code> folder and add dependencies manually.</p>
+<h3>Dependencies</h3>
+<p>Schema form has a lot of dependencies, most of which are optional. Schema Form depends on:</p>
+<ol>
+<li><a href="https://angularjs.org/">AngularJS</a> version 1.3.x is recomended. Version 1.2.x
+has some limitation. See <a href="docs/knownlimitations.md">known limitations</a>.</li>
+<li><a href="https://docs.angularjs.org/api/ngSanitize">angular-sanitize</a></li>
+<li><a href="https://github.com/geraintluff/tv4">tv4</a></li>
+<li><a href="https://github.com/mike-marcacci/objectpath">objectpath</a></li>
+<li><a href="http://getbootstrap.com/">bootstrap 3</a></li>
+</ol>
+<p>If you install via bower you get all of the above except bootstrap since we
+don&#39;t want to push a certain version or flavor on you. Also make
+sure you got the angular version you actually want.</p>
+<h4>Additional dependecies</h4>
+<ol>
+<li>If you&#39;d like to use drag-and-drop reordering of arrays, you&#39;ll also need <a href="https://github.com/angular-ui/ui-sortable">ui-sortable</a> and its <a href="http://jqueryui.com/">jQueryUI</a> dependencies. See the <em>ui-sortable</em> documentation for details about which parts of jQueryUI are needed. You can safely ignore these if you don&#39;t need reordering.</li>
+<li>Schema Form provides tabbed arrays through the form type <code>tabarray</code>. Tab arrays default to tabs on the left side. For these to work, you&#39;ll need to include the CSS from <a href="https://github.com/dbtek/bootstrap-vertical-tabs">bootstrap-vertical-tabs</a>. However, you won&#39;t need Bootstrap Vertical Tabs for horizontal tabs (the <code>tabType: &quot;top&quot;</code> option).</li>
+</ol>
+<p>The minified files include templates - no need to load additional HTML files.</p>
+<h3>Script Loading</h3>
+<p>Schema form is split into two main files, <code>dist/schema-form.min.js</code> and
+<code>dist/boostrap-decorator.min.js</code> and they need be loaded in that order. AngularJ,
+<a href="https://github.com/geraintluff/tv4">tv4</a> and <a href="https://github.com/mike-marcacci/objectpath">objectpath</a>
+also needs to be loaded <em>before</em> Schema Form.</p>
+<pre><code class="language-html">&lt;script type=&quot;text/javascript&quot; src=&quot;bower_components/angular/angular.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;bower_components/angular-sanitize/angular-sanitize.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;bower_components/tv4/tv4.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;bower_components/objectpath/lib/ObjectPath.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;bower_components/angular-schema-form/dist/schema-form.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;bower_components/angular-schema-form/dist/bootstrap-decorator.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+<h3>Module loading</h3>
+<p>Don&#39;t forget to load the <code>schemaForm</code> module or nothing will happen.</p>
+<pre><code class="language-javascript">angular.module(&#39;myModule&#39;, [&#39;schemaForm&#39;]);</code></pre>
+<h2>Add-ons</h2>
+<p>There are several add-ons available, for a full list see the <a href="http://textalk.github.io/angular-schema-form/#third-party-addons">web page</a>.
+Your can also <a href="docs/extending.md">create your own add-ons!</a></p>
+<h2>Contributing</h2>
+<p>Contributions are welcome! Please see <a href="CONTRIBUTING.md">Contributing.md</a> for more info.</p>
+<h2>Building</h2>
+<p>The files in the <code>dist/</code> folder, plus dependencies, are all you need to use Schema Form. But if
+you&#39;d like to build it yourself, we use <a href="http://gulpjs.com/">gulp</a>.</p>
+<p>First off, you need to have nodejs installed. Then install all dev dependencies of the
+project with npm, install gulp and run the default task.</p>
+<pre><code class="language-bash">$ npm install
+$ sudo npm install -g gulp
+$ bower install
+$ gulp</code></pre>
+<p>The default task uses
+<a href="https://github.com/miickel/gulp-angular-templatecache">gulp-angular-templatecache</a> to compile all
+html templates to js and then concatenates and minifies them with the rest of the sources.</p>
+<p>You can also run <code>gulp watch</code> to have it rebuild on change.</p>
+<h2>Tests</h2>
+<p>Unit tests are run with <a href="http://karma-runner.github.io">karma</a> and written using
+<a href="http://visionmedia.github.io/mocha/">mocha</a>, <a href="http://chaijs.com/">chai</a> and
+<a href="http://sinonjs.org/">sinon</a></p>
+<p>To run the tests:</p>
+<ol>
+<li>Install all dependencies via NPM</li>
+<li>Install dev dependencies with bower.</li>
+<li>Install the Karma CLI</li>
+<li>Run the tests</li>
+</ol>
+<pre><code class="language-bash">$ npm install
+$ bower install
+$ sudo npm install -g karma-cli
+$ karma start karma.conf.js</code></pre>
+<p><!-- Please don't remove this: Grab your social icons from https://github.com/carlsednaoui/gitsocial --></p>

@@ -1,0 +1,61 @@
+/* Light Way Admin Bootstrap Theme by PrepBootstrap - http://www.prepbootstrap.com */
+body {
+  margin-top: 70px;
+}
+#wrapper {
+  padding-left: 0;
+}
+#page-wrapper {
+  width: 100%;
+  padding: 5px 15px;
+}
+
+@media (min-width:768px) {
+  /* Wrappers */
+  #wrapper {
+	padding-left: 225px;
+  }
+  #page-wrapper {
+	padding: 15px 25px;
+  }
+
+  /* Side Nav */
+  .side-nav {
+	margin-left: -225px;
+	left: 225px;
+	width: 225px;
+	position: fixed;
+	top: 50px;
+	height: 100%;
+	border-radius: 0;
+	border: none;
+	background-color: #F3F3F3;
+	overflow-y: auto;
+  }
+
+  /*menu overrides*/
+  .side-nav>li.dropdown>ul.dropdown-menu {
+	position: relative;
+	min-width: 225px;
+	margin: 0;
+	padding: 0;
+	border: none;
+	border-radius: 0;
+	background-color: transparent;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+  }
+  .side-nav>li.dropdown>ul.dropdown-menu>li>a {
+	color: #999999;
+	padding: 15px 15px 15px 25px;
+  }
+  .side-nav>li.dropdown>ul.dropdown-menu>li>a:hover,
+  .side-nav>li.dropdown>ul.dropdown-menu>li>a.active,
+  .side-nav>li.dropdown>ul.dropdown-menu>li>a:focus {
+	color: #fff;
+	background-color: #428bca;
+  }
+  .side-nav>li>a {
+	width: 225px;
+  }
+}

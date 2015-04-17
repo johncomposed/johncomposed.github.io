@@ -1,0 +1,31 @@
+<h1>ObjectPath</h1>
+<p><a href="https://travis-ci.org/mike-marcacci/objectpath"><img src="https://travis-ci.org/mike-marcacci/objectpath.svg" alt="Build Status"></a></p>
+<p>Parse js object paths using both dot and bracket notation. Stringify an array of properties into a valid path.</p>
+<ul>
+<li>parse JS object reference fragments</li>
+<li>build JS object reference fragments</li>
+<li>supports presence of unicode characters</li>
+<li>supports presence of control characters in key names</li>
+</ul>
+<h2>Parse a Path</h2>
+<p>ObjectPath.parse(str)</p>
+<pre><code class="language-js">var ObjectPath = require(&#39;objectpath&#39;);
+
+ObjectPath.parse(&#39;a[1].b.c.d[&quot;e&quot;][&quot;f&quot;].g&#39;);
+// =&gt; [&#39;a&#39;,&#39;1&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;,&#39;f&#39;,&#39;g&#39;]</code></pre>
+<h2>Build a Path String</h2>
+<p>ObjectPath.stringify(arr, [quote=&#39;\&#39;&#39;]);</p>
+<pre><code class="language-js">var ObjectPath = require(&#39;objectpath&#39;);
+
+ObjectPath.stringify([&#39;a&#39;,&#39;1&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;,&#39;f&#39;,&#39;g&#39;]);
+// =&gt; &#39;[\&#39;a\&#39;][\&#39;1\&#39;][\&#39;b\&#39;][\&#39;c\&#39;][\&#39;d\&#39;][\&#39;e\&#39;][\&#39;f\&#39;][\&#39;g\&#39;]&#39;
+
+
+ObjectPath.stringify([&#39;a&#39;,&#39;1&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;,&#39;f&#39;,&#39;g&#39;],&#39;&quot;&#39;);
+// =&gt; &#39;[&quot;a&quot;][&quot;1&quot;][&quot;b&quot;][&quot;c&quot;][&quot;d&quot;][&quot;e&quot;][&quot;f&quot;][&quot;g&quot;]&#39;</code></pre>
+<h2>Normalize a Path</h2>
+<p>ObjectPath.normalize(str)</p>
+<p>```js
+var ObjectPath = require(&#39;objectpath&#39;);</p>
+<p>ObjectPath.parse(&#39;a[1].b.c.d[&quot;e&quot;][&quot;f&quot;].g&#39;);
+// =&gt; &#39;[&quot;a&quot;][&quot;1&quot;][&quot;b&quot;][&quot;c&quot;][&quot;d&quot;][&quot;e&quot;][&quot;f&quot;][&quot;g&quot;]&#39;</p>
