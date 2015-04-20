@@ -12,6 +12,9 @@
 app.controller('dashCtrl', function($scope, $location, studentStorageService) {
   $scope.storage = studentStorageService;
   $scope.students = $scope.storage.data;
+  $scope.searchText = {}; 
+  $scope.searchNum = 0;
+  $scope.selectedSearch = 'name';
   $scope.tableHead = ["Name of Applicant", "Date of Application", "GPA", "Interview Score", "Comments"];
 
   $scope.newStudent = function() {
@@ -19,7 +22,15 @@ app.controller('dashCtrl', function($scope, $location, studentStorageService) {
     $location.path("/new/" + newUUID);
   };
   
+  // Note: should later make this work on like $scope.searchNum = {}; 
+  $scope.greaterThan = function(prop, val){
+    return function(item){
+      return parseFloat(item[prop]) > parseFloat(val);
+    };
+  };
 
+  
+  
   
 });
 
@@ -62,6 +73,7 @@ app.controller('formCtrl', function($scope, $location, $routeParams, formDataSer
 
   // Functions for
   $scope.boldChanges = function(modelValue,form) {
+    //console.log(form.key[0]);
     var thisClass = form.key[0];
     var CLASS_NAME = "bold";
     var oldBold = document.querySelectorAll("." + CLASS_NAME);
