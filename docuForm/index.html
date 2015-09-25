@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng:app>
+  <head>
+    <meta name="viewport" content="initial-scale=1">
+    <meta charset="UTF-8">
+
+    
+    <title>Docuform Admin App</title>
+    <!--Styles-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/local.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="lib/callout.min.css">
+    <!--Javascript-->
+    <script type="text/javascript" src="lib/classList.min.js"></script>
+    <script type="text/javascript" src="lib/angular.js"></script>
+    <script type="text/javascript" src="lib/angular-sanitize.js"></script>
+    <script type="text/javascript" src="lib/angular-route.js"></script>
+    <script type="text/javascript" src="lib/angular-resource.js"></script>
+    <script type="text/javascript" src="lib/tv4.js"></script>
+    <script type="text/javascript" src="lib/ObjectPath.js"></script>
+    <script type="text/javascript" src="lib/schema-form.js"></script>
+    <script type="text/javascript" src="lib/bootstrap-decorator.js"></script>
+    <script type="text/javascript" src="lib/pdfmake.min.js"></script>
+    <script type="text/javascript" src="lib/vfs_fonts.js"> </script>
+    <script type="text/javascript" src="lib/bootstrap-callout.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/formDataService.js"></script>
+    <script src="js/documentStorageService.js"></script>
+    <script src="js/docuformAdminController.js"></script>
+  </head>
+  <body ng-app="docuformAdmin">
+    <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-header"><a href="#/" class="navbar-brand">Docuform </a></div>
+    </nav>
+    <data-ng-view></data-ng-view>
+  </body>
+</html>

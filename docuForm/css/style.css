@@ -1,0 +1,93 @@
+@media print {
+  /*Padding and margin resets*/
+  body, * {
+    padding:0px !important;
+    margin: 0px !important;
+  }
+
+  p {
+    margin: 0 0 10.5px !important;
+  }
+  h1 {
+    margin: 0.67em 0;
+  }
+  h2 {
+    margin: 0.83em 0;
+  }
+  h3 {
+    margin: 1em 0;
+  }
+  h4,h5,h6 {
+    margin: 1.33em 0;
+  }
+  
+  ol,ul {
+    margin: 1em 0;
+  }
+  
+  ol,ul {
+    padding: 0 0 0 40px;
+  }
+
+  /*Print styling*/
+  body {
+    border: 2px solid #000;
+  }
+  .noprint {
+    display:none;
+  }
+
+  .page {
+    width:7.5in;
+    height:9.75in;
+    padding:0.25in 0.5in 0 !important;
+  }
+  .bold {
+    font-weight:normal;
+  }
+  
+}
+
+
+.unbold {
+  font-weight:normal;
+}
+
+.bold {
+  font-weight:bolder;
+}
+
+
+.click {
+  cursor:pointer;
+}
+
+/* form+dash extra classes */
+
+.bucket {
+  border-top: 0;
+  border-right: solid 1px #ecf0f1;
+  border-left: solid 1px #ecf0f1;
+  border-bottom: solid 1px #ecf0f1;
+  padding: 15px;
+}
+
+
+
+.tab-content {
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #EAEAEA;
+  border-top: transparent;
+}
+
+#output {
+  margin-top: 42px;
+  border: solid 1px;
+  padding: 10px;
+  border-radius: 2px;
+  height: 700px;
+  overflow-y:scroll;
+}
+
+

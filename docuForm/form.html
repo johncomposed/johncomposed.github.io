@@ -1,0 +1,26 @@
+
+<div id="container" ng-init="initFillForm()" class="container">
+  <div class="col-md-6 noprint">
+    <form>
+      <h2 click-to-edit="model.title"></h2>
+      <h4 click-to-edit="model.subtitle"></h4>
+      <div class="well" sf-schema="schema" sf-form="form" sf-model="model" ng-submit="saveForm()" sf-options="{ formDefaults: { onChange: &quot;boldChanges(modelValue,form)&quot;}, destroyStrategy:&quot;null&quot;}"></div>
+      <div class="form-buttons">
+        <button type="button" ng-click="saveForm()" class="btn btn-success">Save form</button>
+        <button type="button" ng-click="cancelForm()" class="btn btn-danger">Cancel/Exit</button>
+
+        <button type="button" ng-click="pdfMaker()" class="btn btn-warning">Print document</button>
+        <button type="button" ng-click="showModel()" class="btn btn-info">Show data</button>
+      </div>
+     
+
+    </form><br/>
+    <pre ng-show="showData" ng-bind="model | json"></pre>
+
+  </div>
+  <div class="col-md-6">
+    <h2 class="noprint">Document Preview</h2>
+    <div id="output" bind-unsafe-html="preview" class="margin page">
+    </div>
+  </div>
+</div>
