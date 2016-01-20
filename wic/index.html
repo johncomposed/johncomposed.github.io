@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Prez</title>
+
+    <meta name="description" content="-- DESCRIPTION HERE --">
+    <meta name="author" content="john">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="css/highlight/styles/zenburn.css" id="highlight-theme">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <link rel="stylesheet" href="css/custom.css">
+
+  </head>
+
+  <body>
+
+    <div class="reveal">
+      <div class="slides"><section>
+<section id="intro-title" class="big slide">
+<h1>The Culture of Code</h1>
+</section>
+<section id="intro-syllabus" class="big list-none slide" data-has-notes="true">
+<ul>
+<li>A brief history of code</li>
+<li>What is the cloud?</li>
+<li>The software developer hydra</li>
+<li>Understanding code as art</li>
+<li>Understanding code as madness</li>
+<li>Understanding code as $$$</li>
+<li>Modern software development</li>
+<li>How do companies make code?</li>
+</ul><aside class="notes"><h3>Topics</h3><ul>
+<li>software is made by people, and is influenced by their environment</li>
+<li>modern programming is super young</li>
+<li>tech infrastructure is made by people, and is physical</li>
+<li>politics influences tech</li>
+<li>understanding some of the key cultural themes</li>
+<li>what motivates programmers</li>
+<li>what is it like to be a programmer</li>
+<li>what does it mean to design and &quot;ship&quot; a software product</li>
+<li>how do companies go about this?</li>
+</ul></aside>
+</section>
+<section id="intro-wic" class="slide" data-background="/images/wic.png" data-has-notes="true">
+<aside class="notes"><ul>
+<li>At the lowest level, all computers work the same way.<ul>
+<li>Software runs everything.</li>
+<li>The purpose of most software is to manage data.</li>
+<li>People make software by creating code.</li>
+<li>An algorithm is a set of instructions that solves a specific problem.</li>
+<li>&quot;Google&#39;s algorithm&quot; or &quot;Facebook&#39;s algorithm&quot; — it&#39;s just software.</li>
+<li>There are at least 1,700 different programming languages</li>
+<li>Beauty of a particular piece of code</li>
+<li>&quot;Frameworks&quot; — what are they?</li>
+<li>&quot;Developers! Developers! Developers!&quot;</li>
+<li>Microsoft&#39;s skill is translating computer science into business.</li>
+<li>Programmers are angry.</li>
+<li>The 10x programmer may be a myth.</li>
+<li>The best programmers are artists, not stenographers.</li>
+</ul>
+</li>
+</ul></aside>
+</section>
+<section id="intro-math" class="slide" data-background="/images/abacus.jpg" data-has-notes="true">
+<aside class="notes"><p>Math. Math is super important in the world. Math makes GPSs work and like everything else.
+  We&#39;re not covering it too much</p></aside>
+</section>
+<section id="intro-mathpurity" class="slide" data-theme="white" data-has-notes="true">
+<p><img src="/images/purity.png" alt="purity"></p><aside class="notes"><p>huh</p></aside>
+</section>
+<section id="intro-why" class="big slide" data-has-notes="true">
+<h1>The Culture of Code</h1><aside class="notes"><p>why are people here?
+  what do they want to learn?</p></aside>
+</section>
+</section>
+<section>
+<section id="history-highlow" class="big center slide" data-theme="black" data-has-notes="true">
+<h2>Highs &amp; Lows</h2><p>of</p>
+<h1>languages</h1><aside class="notes"><ul>
+<li><p>high-level programming language</p>
+<ul>
+<li>strong abstraction</li>
+<li>may use natural language elements,<ul>
+<li>be easier to use</li>
+</ul>
+</li>
+<li>or may automate (or even hide entirely) significant areas of computing systems (e.g. memory management),</li>
+<li>developing a program simpler and more understandable relative</li>
+<li><p>amount of abstraction provided defines how &quot;high-level&quot; a programming language is.</p>
+</li>
+<li><p>Interpreted</p>
+<ul>
+<li>read and then executed directly, with no compilation stage.</li>
+<li>A program called an interpreter reads each program statement, following the program flow, then decides what to do, and does it. </li>
+</ul>
+</li>
+<li>Compiled</li>
+<li>When code written in a language is compiled, its syntax is transformed into an executable form before running.<ul>
+<li>Directly into machine code.</li>
+<li>Intermediate representations</li>
+<li>Source-to-Source Translated or Trans-compiled</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></aside>
+</section>
+<section id="history-fizzbuzz" class="big slide" data-theme="black">
+<h1>3 =&gt; fizz</h1><h1>5 =&gt; buzz</h1><h1>15 =&gt; fizzbuzz</h1>
+</section>
+<section id="history-assembler" class="slide" data-theme="black" data-has-notes="true">
+<pre><code><span class="hljs-comment">; Init the registers</span>
+<span class="hljs-keyword">mov</span> <span class="hljs-literal">dx</span>,<span class="hljs-number">03030h</span>       <span class="hljs-comment">; For easier printing, the number is</span>
+----
+
+<span class="hljs-comment">;the DX register.</span>
+<span class="hljs-keyword">mov</span> <span class="hljs-number">ah</span>,<span class="hljs-number">0Eh</span>          <span class="hljs-comment">; 0Eh is the IBM PC interrupt 10h</span>
+
+<span class="hljs-keyword">mov</span> <span class="hljs-literal">bl</span>,<span class="hljs-number">100d</span>         <span class="hljs-comment">; BL is the counter (100 numbers).</span>
+<span class="hljs-keyword">xor</span> <span class="hljs-literal">cx</span>,<span class="hljs-literal">cx</span>           <span class="hljs-comment">; CX is a counter that will be used</span>
+<span class="hljs-keyword">xor</span> <span class="hljs-number">bh</span>,<span class="hljs-number">bh</span>           <span class="hljs-comment">; BH is the counter for counting</span>
+<span class="hljs-label">
+writeloop:</span>          <span class="hljs-comment">; Increment the BCD number in DX.          </span>
+<span class="hljs-keyword">inc</span> <span class="hljs-literal">dl</span>              <span class="hljs-comment">; Increment the low digit</span>
+<span class="hljs-keyword">cmp</span> <span class="hljs-literal">dl</span>,<span class="hljs-number">3Ah</span>          <span class="hljs-comment">; If it does not overflow nine,</span>
+<span class="hljs-keyword">jnz</span> writeloop1      <span class="hljs-comment">;continue with the program,</span>
+<span class="hljs-keyword">mov</span> <span class="hljs-literal">dl</span>,<span class="hljs-number">30h</span>          <span class="hljs-comment">;otherwise reset it to zero and</span>
+<span class="hljs-keyword">inc</span> <span class="hljs-number">dh</span>              <span class="hljs-comment">;increment the high digit</span>
+<span class="hljs-label">writeloop1:</span>         
+<span class="hljs-keyword">inc</span> <span class="hljs-number">bh</span>              <span class="hljs-comment">; Increment the BH counter.</span>
+<span class="hljs-keyword">cmp</span> <span class="hljs-number">bh</span>,<span class="hljs-number">03h</span>          <span class="hljs-comment">; If it reached three, we did</span>
+
+<span class="hljs-keyword">jz</span> writefizz        <span class="hljs-comment">;then we need to write "fizz" on the</span>
+<span class="hljs-keyword">cmp</span> <span class="hljs-literal">dl</span>,<span class="hljs-number">30h</span>          <span class="hljs-comment">; The number isn't a multiple of</span>
+<span class="hljs-keyword">jz</span> writebuzz        <span class="hljs-comment">;three, so we check if it's a</span>
+<span class="hljs-keyword">cmp</span> <span class="hljs-literal">dl</span>,<span class="hljs-number">35h</span>          <span class="hljs-comment">;multiple of five. If it is, we</span>
+<span class="hljs-keyword">jz</span> writebuzz        <span class="hljs-comment">;need to write "buzz". The program</span>
+
+<span class="hljs-keyword">mov</span> <span class="hljs-literal">al</span>,<span class="hljs-number">dh</span>           <span class="hljs-comment">; If we're here, there's no need to</span>
+<span class="hljs-keyword">int</span> <span class="hljs-number">10h</span>             <span class="hljs-comment">;write neither "fizz" nor "buzz", so</span>
+<span class="hljs-keyword">mov</span> <span class="hljs-literal">al</span>,<span class="hljs-literal">dl</span>           <span class="hljs-comment">;the program writes the BCD number</span>
+<span class="hljs-keyword">int</span> <span class="hljs-number">10h</span>             <span class="hljs-comment">;in DX</span>
+<span class="hljs-label">writespace:</span>
+<span class="hljs-keyword">mov</span> <span class="hljs-literal">al</span>,<span class="hljs-number">020h</span>         <span class="hljs-comment">;and a white space.</span>
+<span class="hljs-keyword">int</span> <span class="hljs-number">10h</span>
+<span class="hljs-keyword">dec</span> <span class="hljs-literal">bl</span>              <span class="hljs-comment">; Loop if we didn't process 100</span>
+<span class="hljs-keyword">jnz</span> writeloop       <span class="hljs-comment">;numbers.</span>
+<span class="hljs-label">
+programend:</span>         <span class="hljs-comment">; When we did reach 100 numbers,</span>
+<span class="hljs-keyword">cli</span>                 <span class="hljs-comment">;the program flow falls here, where</span>
+<span class="hljs-keyword">hlt</span>                 <span class="hljs-comment">;interrupts are cleared and the</span>
+<span class="hljs-keyword">jmp</span> programend      <span class="hljs-comment">;program is stopped.</span>
+<span class="hljs-label">
+writefizz:</span>          <span class="hljs-comment">; There's need to write "fizz":</span>
+<span class="hljs-keyword">mov</span> <span class="hljs-literal">si</span>,offset fizz  <span class="hljs-comment">; SI points to the "fizz" string,</span>
+<span class="hljs-keyword">call</span> write          <span class="hljs-comment">;that is written on the screen.</span>
+<span class="hljs-keyword">xor</span> <span class="hljs-number">bh</span>,<span class="hljs-number">bh</span>           <span class="hljs-comment">; BH, the counter for computing the</span>
+<span class="hljs-keyword">cmp</span> <span class="hljs-literal">dl</span>,<span class="hljs-number">30h</span>          <span class="hljs-comment">; We did write "fizz", but, if the</span>
+<span class="hljs-keyword">jz</span> writebuzz        <span class="hljs-comment">;number is a multiple of five, we</span>
+<span class="hljs-keyword">cmp</span> <span class="hljs-literal">dl</span>,<span class="hljs-number">35h</span>          <span class="hljs-comment">;could need to write "buzz" also:</span>
+<span class="hljs-keyword">jnz</span> writespace      <span class="hljs-comment">;check if the number is multiple of</span>
+<span class="hljs-label">
+writebuzz:</span>          <span class="hljs-comment">; (The above code falls here if</span>
+<span class="hljs-keyword">mov</span> <span class="hljs-literal">si</span>,offset buzz  <span class="hljs-comment">;SI points to the "buzz" string,</span>
+<span class="hljs-keyword">call</span> write          <span class="hljs-comment">;that is written on the screen.</span>
+<span class="hljs-keyword">jmp</span> writespace      <span class="hljs-comment">; Write a space to return to the main</span>
+<span class="hljs-label">
+write:</span>              <span class="hljs-comment">; Write subroutine:</span>
+<span class="hljs-keyword">mov</span> <span class="hljs-literal">cl</span>,<span class="hljs-number">04h</span>          <span class="hljs-comment">; Set CX to the lenght of the string:</span>
+<span class="hljs-label">
+write1:</span>
+<span class="hljs-keyword">mov</span> <span class="hljs-literal">al</span>,[<span class="hljs-literal">si</span>]         <span class="hljs-comment">; Load the character to write in AL.</span>
+<span class="hljs-keyword">inc</span> <span class="hljs-literal">si</span>              <span class="hljs-comment">; Increment the counter SI.</span>
+<span class="hljs-keyword">int</span> <span class="hljs-number">10h</span>             <span class="hljs-comment">; Call interrupt 10h, function 0Eh to</span>
+
+<span class="hljs-keyword">loop</span> write1         <span class="hljs-comment">; Decrement CX: if CX is not zero, do</span>
+<span class="hljs-keyword">ret</span>                 <span class="hljs-comment">;loop, otherwise return from</span>
+<span class="hljs-label">
+fizz:</span>               <span class="hljs-comment">;The "fizz" string.</span>
+<span class="hljs-pseudo">db</span> <span class="hljs-string">"fizz"</span>
+<span class="hljs-label">
+buzz:</span>               <span class="hljs-comment">;The "buzz" string.</span>
+<span class="hljs-pseudo">db</span> <span class="hljs-string">"buzz"</span>
+</code></pre><aside class="notes"><p>8086 assembly code</p></aside>
+</section>
+<section id="history-compilers" class="img slide" data-theme="black" data-has-notes="true">
+<p><img src="/images/grace_small.jpg" alt="Grace"></p><aside class="notes"><p>In 1952 she had an operational compiler. &quot;Nobody believed that,&quot; she said. &quot;I had a running compiler and nobody would touch it. They told me computers could only do arithmetic.&quot;</p>
+<p>&quot;debugging&quot; for fixing computer glitches (in one instance, removing a moth from a computer)</p></aside>
+</section>
+<section id="history-fortran" class="slide" data-theme="black" data-has-notes="true">
+<pre><code><span class="hljs-function"><span class="hljs-keyword">program</span></span> fizzbuzz_if
+   <span class="hljs-type">integer</span> :: i
+
+   <span class="hljs-keyword">do</span> i = <span class="hljs-number">1</span>, <span class="hljs-number">100</span>
+      <span class="hljs-keyword">if</span>     (<span class="hljs-built_in">mod</span>(i,<span class="hljs-number">15</span>) == <span class="hljs-number">0</span>) <span class="hljs-keyword">then</span>; <span class="hljs-built_in">print</span> *, <span class="hljs-string">'FizzBuzz'</span>
+      <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-built_in">mod</span>(i,<span class="hljs-number">3</span>) == <span class="hljs-number">0</span>) <span class="hljs-keyword">then</span>; <span class="hljs-built_in">print</span> *, <span class="hljs-string">'Fizz'</span>
+      <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-built_in">mod</span>(i,<span class="hljs-number">5</span>) == <span class="hljs-number">0</span>) <span class="hljs-keyword">then</span>; <span class="hljs-built_in">print</span> *, <span class="hljs-string">'Buzz'</span>
+      <span class="hljs-keyword">else</span>;                         <span class="hljs-built_in">print</span> *, i
+      <span class="hljs-keyword">end</span> <span class="hljs-keyword">if</span>
+   <span class="hljs-keyword">end</span> <span class="hljs-keyword">do</span>
+<span class="hljs-keyword">end</span> <span class="hljs-function"><span class="hljs-keyword">program</span></span> fizzbuzz_if
+</code></pre><aside class="notes"><p>gh was on the committee for cobol, which was similar
+  navy adopted cobol as standard, and people used it</p></aside>
+</section>
+<section id="history-punchcards" class="slide" data-background="#871127" data-theme="black" data-has-notes="true">
+<p><img src="/images/fortrancard_small.jpg" alt="Punch Cards"></p><aside class="notes"><p>80 chars
+  one punchcard was one line</p></aside>
+</section>
+<section id="history-termdos" class="slide" data-theme="black" data-has-notes="true">
+<p><img src="/images/term.jpg" alt="dos"></p><aside class="notes"><p>unix vs dos</p></aside>
+</section>
+<section id="history-c" class="slide" data-theme="black" data-has-notes="true">
+<pre><code><span class="hljs-preprocessor">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;stdio.h&gt;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span> <span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+  <span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>;
+  <span class="hljs-keyword">while</span>(i &lt;= <span class="hljs-number">100</span>) {
+    <span class="hljs-keyword">if</span>(i % <span class="hljs-number">15</span> == <span class="hljs-number">0</span>)
+      <span class="hljs-built_in">puts</span>(<span class="hljs-string">"FizzBuzz"</span>);
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(i % <span class="hljs-number">3</span> == <span class="hljs-number">0</span>)
+      <span class="hljs-built_in">puts</span>(<span class="hljs-string">"Fizz"</span>);
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(i % <span class="hljs-number">5</span> == <span class="hljs-number">0</span>)
+      <span class="hljs-built_in">puts</span>(<span class="hljs-string">"Buzz"</span>);
+    <span class="hljs-keyword">else</span>
+      <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d\n"</span>, i);
+    i++;
+  }
+}
+</code></pre><aside class="notes"><p>early 1970 by Ken Thompson and Dennis Ritchie at AT&amp;T Bell Labs</p></aside>
+</section>
+</section>
+<section>
+<section id="pc-xerox" class="img slide" data-theme="sky" data-has-notes="true">
+<p><img src="/images/xeroxstar.png" alt="xerox star"></p><aside class="notes"><p>xerox Palo Alto Research Center Incorporated (PARC)</p>
+<ul>
+<li>laser printing</li>
+<li>Ethernet</li>
+<li>the modern personal computer</li>
+<li>graphical user interface (GUI)</li>
+<li>desktop metaphor</li>
+<li>WYSIWYG</li>
+<li>object-oriented programming</li>
+<li>casual ubiquitous computing</li>
+<li>MVC software architecture</li>
+</ul>
+<p>How children learned</p>
+<p>Alto prototype for Star... tons of work-years of experience with them over a period of eight years, making Alto perhaps the largest prototyping effort in history.</p>
+<p>According to the original designers, about thirty person-years went into the design of the user interface, functionality, and hardware.</p></aside>
+</section>
+<section id="pc-billsteve" class="slide" data-background="/images/billsteve.jpg" data-has-notes="true">
+<aside class="notes"><p>Steve made Microsoft promise not to ship any software that used a mouse until at least one year after the first shipment of the Macintosh.
+1983, Microsoft announced a new, mouse-based system graphical user interface environment called Windows</p>
+<p>&quot;Well, Steve, I think there&#39;s more than one way of looking at it. I think it&#39;s more like we both had this rich neighbor named Xerox and I broke into his house to steal the TV set and found out that you had already stolen it.&quot;</p></aside>
+</section>
+<section id="pc-stevewoz" class="slide">
+<p><img src="/images/jobsphreak.jpg" alt=""></p>
+</section>
+<section id="pc-phreak" class="slide" data-background="/images/blueboxes.jpg" data-has-notes="true">
+<aside class="notes"><p>&quot;It becomes a playground,&quot; Lapsley says, describing phone phreaks&#39; determination to access remote or unusual telephone switchboards. &quot;It becomes a question of... how far can you go. &#39;How close can you get to the north pole?&#39; That&#39;s a game some kids used to play. &#39;Let&#39;s pick a spot to see how close we can get to it.&#39; It becomes in some ways like virtual tourism and there&#39;s an infinite</p></aside>
+</section>
+<section id="pc-mac" class="img flex slide" data-theme="black">
+<p><img src="/images/pirates.jpg" alt="pirate"></p>
+</section>
+</section>
+<section>
+<section id="workshop-links" class="big slide" data-theme="black">
+<h1>Links</h1><ul>
+<li><code>bit.ly/1Pps06g</code></li>
+<li><code>bit.ly/1RzdXBx</code></li>
+<li><code>jsforcats.com</code></li>
+</ul>
+</section>
+<section id="workshop-js-types" class="big center slide" data-theme="black">
+<ul>
+<li><code>Boolean</code></li>
+<li><code>Null</code></li>
+<li><code>Undefined</code></li>
+<li><code>Number</code></li>
+<li><code>String</code></li>
+</ul>
+</section>
+<section id="workshop-js-fancytypes" class="slide" data-theme="black">
+<h1>Objects</h1><pre><code>
+
+<span class="http">
+
+<span class="css">
+                        <span class="hljs-rules">{
+                          <span class="hljs-rule"><span class="hljs-attribute">key</span>:<span class="hljs-value"> <span class="hljs-string">"value"</span>
+                        </span></span></span>}</span></span>
+</code></pre>
+</section>
+<section id="workshop-functions" class="slide" data-theme="black">
+<h1>functions</h1><pre><code>
+
+<span class="javascript">
+                        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">wow</span>(<span class="hljs-params"></span>) </span>{
+                          <span class="hljs-keyword">return</span> <span class="hljs-string">"wow!"</span>;
+                        }
+
+                        <span class="hljs-keyword">var</span> a = wow();
+
+                        <span class="hljs-built_in">console</span>.log(a);</span>
+</code></pre>
+</section>
+<section id="workshop-wat" class="slide" data-theme="black">
+<pre><code><span class="hljs-keyword">function</span> <span class="hljs-keyword">out</span>(code) {
+    console.log(code + <span class="hljs-string">" =&gt; "</span> + eval(code));
+}
+
+<span class="hljs-keyword">out</span>(<span class="hljs-string">'[] + []'</span>);
+<span class="hljs-keyword">out</span>(<span class="hljs-string">'[] + {}'</span>);
+<span class="hljs-keyword">out</span>(<span class="hljs-string">'{} + []'</span>);
+<span class="hljs-keyword">out</span>(<span class="hljs-string">'{} + {}'</span>);
+<span class="hljs-keyword">out</span>(<span class="hljs-string">'Array(16).join("wat" + 1)'</span>);
+<span class="hljs-keyword">out</span>(<span class="hljs-string">'Array(16).join("wat - 1")'</span>);
+<span class="hljs-keyword">out</span>(<span class="hljs-string">'Array(16).join("wat" - 1) + " Batman!"'</span>);
+</code></pre>
+</section>
+<section id="workshop-wat2" class="slide" data-theme="black">
+<pre><code><span class="hljs-literal">[]</span> + <span class="hljs-literal">[]</span> =&gt; <span class="hljs-string">""</span>
+
+<span class="hljs-literal">[]</span> + {} =&gt; [object <span class="hljs-type">Object</span>]
+
+{} + <span class="hljs-literal">[]</span> =&gt; <span class="hljs-number">0</span>
+
+{} + {} =&gt; <span class="hljs-type">NaN</span>
+
+<span class="hljs-type">Array</span>(<span class="hljs-number">16</span>).join(<span class="hljs-string">"wat"</span> + <span class="hljs-number">1</span>) =&gt;
+  wat1wat1wat1wat1wat1wat1wat1wat1wat1wat1wat1wat1wat1wat1wat1
+
+<span class="hljs-type">Array</span>(<span class="hljs-number">16</span>).join(<span class="hljs-string">"wat - 1"</span>) =&gt;
+  wat - <span class="hljs-number">1</span>wat - <span class="hljs-number">1</span>wat - <span class="hljs-number">1</span>wat - <span class="hljs-number">1</span>wat - <span class="hljs-number">1</span>wat - <span class="hljs-number">1</span>wat - <span class="hljs-number">1</span>wat - <span class="hljs-number">1</span>wat - <span class="hljs-number">1</span>wat - <span class="hljs-number">1</span>wat - <span class="hljs-number">1</span>wat - <span class="hljs-number">1</span>wat - <span class="hljs-number">1</span>wat - <span class="hljs-number">1</span>wat - <span class="hljs-number">1</span>
+
+<span class="hljs-type">Array</span>(<span class="hljs-number">16</span>).join(<span class="hljs-string">"wat"</span> - <span class="hljs-number">1</span>) + <span class="hljs-string">" Batman!"</span> =&gt;
+  <span class="hljs-type">NaNNaNNaNNaNNaNNaNNaNNaNNaNNaNNaNNaNNaNNaNNaN</span> <span class="hljs-type">Batman</span>!
+</code></pre>
+</section>
+</section>
+<section id="end" class="big slide" data-has-notes="true">
+<h1>The Culture of Code</h1><aside class="notes"><p>So what did we learn?</p></aside>
+</section></div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+
+      transition: Reveal.getQueryHash().transition || 'slide', // none/fade/slide/convex/concave/zoom
+
+      // Optional reveal.js plugins
+      dependencies: [
+        //{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        //{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        //{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'plugin/zoom-js/zoom.js', async: true },
+        { src: 'plugin/notes/notes.js', async: true }
+      ]
+    });
+    </script>
+
+    <script src="js/dynamic-theme.js"></script><script src="js/such-notes-print.js"></script><script src="js/custom.js"></script>
+
+  </body>
+</html>
