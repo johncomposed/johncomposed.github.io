@@ -62,7 +62,7 @@
 <li>how do companies go about this?</li>
 </ul></aside>
 </section>
-<section id="intro-wic" class="slide" data-background="/images/wic.png" data-has-notes="true">
+<section id="intro-wic" class="slide" data-background="./images/wic.png" data-has-notes="true">
 <aside class="notes"><ul>
 <li>At the lowest level, all computers work the same way.<ul>
 <li>Software runs everything.</li>
@@ -82,12 +82,12 @@
 </li>
 </ul></aside>
 </section>
-<section id="intro-math" class="slide" data-background="/images/abacus.jpg" data-has-notes="true">
+<section id="intro-math" class="slide" data-background="./images/abacus.jpg" data-has-notes="true">
 <aside class="notes"><p>Math. Math is super important in the world. Math makes GPSs work and like everything else.
   We&#39;re not covering it too much</p></aside>
 </section>
 <section id="intro-mathpurity" class="slide" data-theme="white" data-has-notes="true">
-<p><img src="/images/purity.png" alt="purity"></p><aside class="notes"><p>huh</p></aside>
+<p><img src="./images/purity.png" alt="purity"></p><aside class="notes"><p>huh</p></aside>
 </section>
 <section id="intro-why" class="big slide" data-has-notes="true">
 <h1>The Culture of Code</h1><aside class="notes"><p>why are people here?
@@ -147,7 +147,7 @@ writeloop:</span>          <span class="hljs-comment">; Increment the BCD number
 <span class="hljs-keyword">jnz</span> writeloop1      <span class="hljs-comment">;continue with the program,</span>
 <span class="hljs-keyword">mov</span> <span class="hljs-literal">dl</span>,<span class="hljs-number">30h</span>          <span class="hljs-comment">;otherwise reset it to zero and</span>
 <span class="hljs-keyword">inc</span> <span class="hljs-number">dh</span>              <span class="hljs-comment">;increment the high digit</span>
-<span class="hljs-label">writeloop1:</span>         
+<span class="hljs-label">writeloop1:</span>
 <span class="hljs-keyword">inc</span> <span class="hljs-number">bh</span>              <span class="hljs-comment">; Increment the BH counter.</span>
 <span class="hljs-keyword">cmp</span> <span class="hljs-number">bh</span>,<span class="hljs-number">03h</span>          <span class="hljs-comment">; If it reached three, we did</span>
 
@@ -205,7 +205,7 @@ buzz:</span>               <span class="hljs-comment">;The "buzz" string.</span>
 </code></pre><aside class="notes"><p>8086 assembly code</p></aside>
 </section>
 <section id="history-compilers" class="img slide" data-theme="black" data-has-notes="true">
-<p><img src="/images/grace_small.jpg" alt="Grace"></p><aside class="notes"><p>In 1952 she had an operational compiler. &quot;Nobody believed that,&quot; she said. &quot;I had a running compiler and nobody would touch it. They told me computers could only do arithmetic.&quot;</p>
+<p><img src="./images/grace_small.jpg" alt="Grace"></p><aside class="notes"><p>In 1952 she had an operational compiler. &quot;Nobody believed that,&quot; she said. &quot;I had a running compiler and nobody would touch it. They told me computers could only do arithmetic.&quot;</p>
 <p>&quot;debugging&quot; for fixing computer glitches (in one instance, removing a moth from a computer)</p></aside>
 </section>
 <section id="history-fortran" class="slide" data-theme="black" data-has-notes="true">
@@ -224,11 +224,11 @@ buzz:</span>               <span class="hljs-comment">;The "buzz" string.</span>
   navy adopted cobol as standard, and people used it</p></aside>
 </section>
 <section id="history-punchcards" class="slide" data-background="#871127" data-theme="black" data-has-notes="true">
-<p><img src="/images/fortrancard_small.jpg" alt="Punch Cards"></p><aside class="notes"><p>80 chars
+<p><img src="./images/fortrancard_small.jpg" alt="Punch Cards"></p><aside class="notes"><p>80 chars
   one punchcard was one line</p></aside>
 </section>
 <section id="history-termdos" class="slide" data-theme="black" data-has-notes="true">
-<p><img src="/images/term.jpg" alt="dos"></p><aside class="notes"><p>unix vs dos</p></aside>
+<p><img src="./images/term.jpg" alt="dos"></p><aside class="notes"><p>unix vs dos</p></aside>
 </section>
 <section id="history-c" class="slide" data-theme="black" data-has-notes="true">
 <pre><code><span class="hljs-preprocessor">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;stdio.h&gt;</span></span>
@@ -253,7 +253,7 @@ buzz:</span>               <span class="hljs-comment">;The "buzz" string.</span>
 </section>
 <section>
 <section id="pc-xerox" class="img slide" data-theme="sky" data-has-notes="true">
-<p><img src="/images/xeroxstar.png" alt="xerox star"></p><aside class="notes"><p>xerox Palo Alto Research Center Incorporated (PARC)</p>
+<p><img src="./images/xeroxstar.png" alt="xerox star"></p><aside class="notes"><p>xerox Palo Alto Research Center Incorporated (PARC)</p>
 <ul>
 <li>laser printing</li>
 <li>Ethernet</li>
@@ -269,19 +269,19 @@ buzz:</span>               <span class="hljs-comment">;The "buzz" string.</span>
 <p>Alto prototype for Star... tons of work-years of experience with them over a period of eight years, making Alto perhaps the largest prototyping effort in history.</p>
 <p>According to the original designers, about thirty person-years went into the design of the user interface, functionality, and hardware.</p></aside>
 </section>
-<section id="pc-billsteve" class="slide" data-background="/images/billsteve.jpg" data-has-notes="true">
+<section id="pc-billsteve" class="slide" data-background="./images/billsteve.jpg" data-has-notes="true">
 <aside class="notes"><p>Steve made Microsoft promise not to ship any software that used a mouse until at least one year after the first shipment of the Macintosh.
 1983, Microsoft announced a new, mouse-based system graphical user interface environment called Windows</p>
 <p>&quot;Well, Steve, I think there&#39;s more than one way of looking at it. I think it&#39;s more like we both had this rich neighbor named Xerox and I broke into his house to steal the TV set and found out that you had already stolen it.&quot;</p></aside>
 </section>
 <section id="pc-stevewoz" class="slide">
-<p><img src="/images/jobsphreak.jpg" alt=""></p>
+<p><img src="./images/jobsphreak.jpg" alt=""></p>
 </section>
-<section id="pc-phreak" class="slide" data-background="/images/blueboxes.jpg" data-has-notes="true">
+<section id="pc-phreak" class="slide" data-background="./images/blueboxes.jpg" data-has-notes="true">
 <aside class="notes"><p>&quot;It becomes a playground,&quot; Lapsley says, describing phone phreaks&#39; determination to access remote or unusual telephone switchboards. &quot;It becomes a question of... how far can you go. &#39;How close can you get to the north pole?&#39; That&#39;s a game some kids used to play. &#39;Let&#39;s pick a spot to see how close we can get to it.&#39; It becomes in some ways like virtual tourism and there&#39;s an infinite</p></aside>
 </section>
 <section id="pc-mac" class="img flex slide" data-theme="black">
-<p><img src="/images/pirates.jpg" alt="pirate"></p>
+<p><img src="./images/pirates.jpg" alt="pirate"></p>
 </section>
 </section>
 <section>
