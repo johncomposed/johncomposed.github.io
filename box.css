@@ -1,0 +1,31 @@
+* {  box-sizing:border-box; }
+
+.box, block {
+  height: 100px;
+  width: 100px;
+  border: 3px solid black;
+  display: inline-block;
+}
+
+.red {
+  background: red;
+}
+
+
+.green {
+  background: green;
+}
+
+
+.blue {
+  background: blue;
+}
+
+
+.circle {
+  border-radius: 50%;
+}
+
+.click {
+  cursor: pointer;
+}
