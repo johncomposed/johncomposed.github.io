@@ -6,7 +6,7 @@
     const templateMap = {
     t_0: src_containers_Home_Home
   }
-    const templateTree = {c:{"/":{t:"t_0"}}}
+    const templateTree = {c:{"modpol":{t:"t_0"}}}
     
     const getTemplateForPath = path => {
       const parts = path === '/' ? ['/'] : path.split('/').filter(d => d)
